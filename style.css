@@ -124,17 +124,17 @@ body{
 }
 
 .forte{
-    background-color:green
+    background-color:green;
     height: 30px;
-    width: 100%
+    width: 100%;
     position: relative;
     bottom: 30px;
 }
 
 .media{
-    background-color: yellow
+    background-color: yellow;
     height: 30px;
-    width: 66%
+    width: 66%;
     position: relative;
     bottom: 30px;
 }
