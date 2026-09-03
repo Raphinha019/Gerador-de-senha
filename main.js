@@ -1,5 +1,5 @@
 const numeroSenha = document.querySelector('.parametro-senha__texto')
-const numeroSenha = document.querySelector('#campo-senha')
+const campoSenha = document.querySelector('#campo-senha')
 
 campoSenha.value = 'Aqui vai aparecer a senha'
 
@@ -21,4 +21,25 @@ botoes[0].onclick = diminuir;
 function diminuir(){
     tamanhoSenha--;
     numeroSenha.textContent = tamanhoSenha
+    geraSenha()
+}
+
+botoes[1].onclick = aumentar;
+
+function aumentar(){
+    tamanhoSenha++;
+    numeroSenha.textContent = tamanhoSenha
+    geraSenha()
+}
+
+geraSenha()
+
+function geraSenha(){
+    let senha = ''
+    for(let i = 0; i < tamanhoSenha; i ++){
+        let numeroAleatorio = Math.random() * 26; 
+        numeroAleatorio = Math.floor(numeroAleatorio)
+        senha = senha + letrasMaiusculas[numeroAleatorio]
+    }
+    campoSenha.value = senha;
 }
